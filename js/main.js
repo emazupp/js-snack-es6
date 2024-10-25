@@ -58,7 +58,7 @@ Nome sarà l'unica proprietà da compilare, le altre saranno tutte settate a 0.
 Generare numeri random al posto degli 0 nelle proprietà "punti" fatti e "falli subiti".
 Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. */
 
-const squadreDiCalcio = [
+/* const squadreDiCalcio = [
   {
     nome: "Milan",
     puntiFatti: 0,
@@ -103,7 +103,24 @@ for (let i = 0; i < squadreDiCalcio.length; i++) {
   nuovoArray[i] = squadreDiCalcio[i];
   delete nuovoArray[i].puntiFatti;
 }
-console.log(nuovoArray);
+console.log(nuovoArray); */
+
 // ! Snack 3 (Bonus)
 /* Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
 La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri. */
+
+const array = [1, 3, 5, 8, 9, 1, 4, 7];
+
+const intervalloValori = (array, indexStart, indexEnd) => {
+  if (indexStart < indexEnd) {
+    const nuovoArray = [];
+    for (let i = indexStart + 1; i < indexEnd; i++) {
+      nuovoArray.push(array[i]);
+    }
+    return nuovoArray;
+  } else {
+    return "Inserire valore a più piccolo di valore b";
+  }
+};
+
+console.log(intervalloValori(array, 0, 5));
