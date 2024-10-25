@@ -7,7 +7,7 @@ const biciclette = [
   {
     nome: "Velox",
     peso: {
-      valore: 500,
+      valore: 1000,
       unitaDiMisura: "gr",
     },
   },
@@ -28,21 +28,29 @@ const biciclette = [
   {
     nome: "Monster",
     peso: {
-      valore: 600,
+      valore: 1200,
       unitaDiMisura: "gr",
     },
   },
   {
     nome: "NonLoSo",
     peso: {
-      valore: 5000,
+      valore: 2000,
       unitaDiMisura: "gr",
     },
   },
 ];
 
-const checkLighter = () => {};
+const checkLighter = () => {
+  let indexLigter = 0;
+  for (let i = 1; i < biciclette.length; i++) {
+    if (biciclette[indexLigter].peso.valore > biciclette[i].peso.valore)
+      indexLigter = i;
+  }
+  return biciclette[indexLigter];
+};
 
+console.log(checkLighter());
 // ! Snack 2
 /* Creare un array di oggetti di squadre di calcio.
  Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
